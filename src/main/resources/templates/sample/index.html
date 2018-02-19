@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Yui Ogura Photos</title>
+</head>
+<body>
+	<p th:text="${name}" />
+
+	<table>
+		<tr>
+			<th>Photos</th>
+		</tr>
+		<tr th:each="link : ${photoList}">
+			<td><img alt="${link}" th:src="${link}"></img></td>
+		</tr>
+	</table>
+</body>
+</html>
